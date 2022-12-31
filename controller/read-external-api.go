@@ -14,6 +14,11 @@ func (controller *Controller) ReadExternalApi(context *gin.Context) {
 	}
 
 	err = controller.UseCases.SavePokemonsInCSV("pokemons", pokemons)
+	if err != nil {
+		logger.Log(err.Error())
+		context.AbortWithStatusJSON(500, err)
+		return
+	}
 
 	context.JSON(200, pokemons)
 }
