@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	csvmanager "github.com/georgexx009-wizeline/ondemand-go-bootcamp/utils/csv-manager"
 	"github.com/georgexx009-wizeline/ondemand-go-bootcamp/utils/fetcher"
 
 	"github.com/georgexx009-wizeline/ondemand-go-bootcamp/controller"
@@ -13,7 +14,7 @@ import (
 func main() {
 	r := gin.New()
 
-	useCases := usecases.NewUseCases(fetcher.Fetcher{})
+	useCases := usecases.NewUseCases(fetcher.Fetcher{}, csvmanager.CsvManager{})
 	c := controller.NewController(useCases)
 	c.Router = r
 	router.NewRouter(r, c)

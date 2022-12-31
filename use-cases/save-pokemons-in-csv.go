@@ -1,30 +1,13 @@
 package usecases
 
 import (
-	"encoding/csv"
 	"github.com/georgexx009-wizeline/ondemand-go-bootcamp/model"
 	logger "github.com/georgexx009-wizeline/ondemand-go-bootcamp/utils"
-	"os"
 	"reflect"
 	"strconv"
 )
 
-func (*UseCases) SavePokemonsInCSV(fileName string, pokemons []model.Pokemon) error {
-	csvFile, err := os.Create(fileName + ".csv")
-	defer func() {
-		err = csvFile.Close()
-		if err != nil {
-			logger.Log(err.Error())
-		}
-	}()
-	if err != nil {
-		logger.Log(err.Error())
-		return err
-	}
-
-	csvWriter := csv.NewWriter(csvFile)
-	defer csvWriter.Flush()
-
+func (u *UseCases) SavePokemonsInCSV(fileName string, pokemons []model.Pokemon) error {
 	fields := getFieldsFromStruct(pokemons[0])
 	data := [][]string{fields}
 
@@ -32,11 +15,12 @@ func (*UseCases) SavePokemonsInCSV(fileName string, pokemons []model.Pokemon) er
 		row := []string{strconv.Itoa(pokemon.Id), pokemon.Name, strconv.Itoa(pokemon.Weight)}
 		data = append(data, row)
 	}
-	err = csvWriter.WriteAll(data)
+	err := u.CsvManager.Save(fileName, data)
 	if err != nil {
 		logger.Log(err.Error())
 		return err
 	}
+
 	return nil
 }
 
