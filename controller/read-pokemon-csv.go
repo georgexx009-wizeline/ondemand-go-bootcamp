@@ -1,7 +1,7 @@
 package controller
 
 import (
-	logger "github.com/georgexx009-wizeline/ondemand-go-bootcamp/pkg"
+	"github.com/georgexx009-wizeline/ondemand-go-bootcamp/pkg/logger"
 	"github.com/gin-gonic/gin"
 )
 

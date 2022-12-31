@@ -3,10 +3,9 @@ package fetcher
 import (
 	"encoding/json"
 	"github.com/georgexx009-wizeline/ondemand-go-bootcamp/model"
+	"github.com/georgexx009-wizeline/ondemand-go-bootcamp/pkg/logger"
 	"io"
 	"net/http"
-
-	logger "github.com/georgexx009-wizeline/ondemand-go-bootcamp/pkg"
 )
 
 type Fetcher struct {

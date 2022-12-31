@@ -2,9 +2,8 @@ package csv_manager
 
 import (
 	"encoding/csv"
+	"github.com/georgexx009-wizeline/ondemand-go-bootcamp/pkg/logger"
 	"os"
-
-	logger "github.com/georgexx009-wizeline/ondemand-go-bootcamp/pkg"
 )
 
 type CsvManager struct {
