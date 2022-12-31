@@ -2,8 +2,8 @@ package usecases
 
 import (
 	"github.com/georgexx009-wizeline/ondemand-go-bootcamp/model"
-	logger "github.com/georgexx009-wizeline/ondemand-go-bootcamp/utils"
-	"github.com/georgexx009-wizeline/ondemand-go-bootcamp/utils/fetcher"
+	logger "github.com/georgexx009-wizeline/ondemand-go-bootcamp/pkg"
+	"github.com/georgexx009-wizeline/ondemand-go-bootcamp/pkg/fetcher"
 )
 
 //var URL = "https://pokeapi.co/api/v2/pokemon/"

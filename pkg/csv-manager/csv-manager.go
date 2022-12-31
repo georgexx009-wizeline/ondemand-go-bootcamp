@@ -4,7 +4,7 @@ import (
 	"encoding/csv"
 	"os"
 
-	logger "github.com/georgexx009-wizeline/ondemand-go-bootcamp/utils"
+	logger "github.com/georgexx009-wizeline/ondemand-go-bootcamp/pkg"
 )
 
 type CsvManager struct {

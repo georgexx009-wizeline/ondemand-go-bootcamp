@@ -6,7 +6,7 @@ import (
 	"io"
 	"net/http"
 
-	logger "github.com/georgexx009-wizeline/ondemand-go-bootcamp/utils"
+	logger "github.com/georgexx009-wizeline/ondemand-go-bootcamp/pkg"
 )
 
 type Fetcher struct {

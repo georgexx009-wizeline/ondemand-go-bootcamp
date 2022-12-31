@@ -3,7 +3,7 @@ package usecases
 import (
 	"encoding/csv"
 	"github.com/georgexx009-wizeline/ondemand-go-bootcamp/model"
-	logger "github.com/georgexx009-wizeline/ondemand-go-bootcamp/utils"
+	logger "github.com/georgexx009-wizeline/ondemand-go-bootcamp/pkg"
 	"os"
 	"strconv"
 )

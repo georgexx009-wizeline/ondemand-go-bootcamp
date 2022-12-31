@@ -1,8 +1,8 @@
 package usecases
 
 import (
-	csvmanager "github.com/georgexx009-wizeline/ondemand-go-bootcamp/utils/csv-manager"
-	"github.com/georgexx009-wizeline/ondemand-go-bootcamp/utils/fetcher"
+	csvmanager "github.com/georgexx009-wizeline/ondemand-go-bootcamp/pkg/csv-manager"
+	"github.com/georgexx009-wizeline/ondemand-go-bootcamp/pkg/fetcher"
 )
 
 type UseCases struct {
